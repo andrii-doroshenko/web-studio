@@ -1,0 +1,11 @@
+// Main Logo
+.logo {
+  font-family: $raleway;
+  @include font-property(26px, 700, 1.2);
+  text-decoration: none;
+  color: $dark-color;
+
+  &--color {
+    color: $accent-color;
+  }
+}

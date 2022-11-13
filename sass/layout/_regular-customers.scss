@@ -1,0 +1,44 @@
+.customers {
+  padding-top: $padding-section;
+  padding-bottom: $padding-section;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    width: 170px;
+    height: 92px;
+  }
+
+  &__icon {
+    width: 106px;
+    height: 45px;
+
+    transition: fill 250ms $animation;
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    color: $accent-color;
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $accent-color;
+  }
+
+  &__link {
+    border: 1px solid $social-primary-color;
+    border-radius: 4px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border-color: $accent-color;
+  }
+}

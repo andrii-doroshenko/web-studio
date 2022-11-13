@@ -1,0 +1,40 @@
+// Header
+.page-header {
+  border-bottom: 1px solid $border-light;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 93px;
+  }
+
+  &__list {
+    @extend %list-flex;
+    margin-left: auto;
+    font-weight: 500;
+  }
+
+  &__item:not(:last-child) {
+    @extend %item-margin;
+  }
+
+  &__link {
+    @extend %link-hover;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__icon {
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+}

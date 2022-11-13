@@ -1,0 +1,25 @@
+// Section hero
+.hero {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 200px 0;
+  background-color: $img-background;
+  background-image: linear-gradient($img-overlay, $img-overlay), url(../images/hero-img.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 0 15px;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 30px;
+    @include font-property(44px, 900, 1.4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $text-white;
+  }
+}

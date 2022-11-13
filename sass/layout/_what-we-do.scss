@@ -1,0 +1,31 @@
+// Section "What we do"
+.what-we-do {
+  padding: 0 0 $padding-section 0;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 370px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 27px 0;
+    text-align: center;
+    background-color: $img-do-overlay;
+  }
+}

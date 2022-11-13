@@ -1,0 +1,37 @@
+// Section Our team
+.team {
+  padding: $padding-section 0;
+  background-color: $bg-secondary;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 270px;
+    overflow: hidden;
+    background-color: $text-white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__description {
+    padding: 30px 32px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}

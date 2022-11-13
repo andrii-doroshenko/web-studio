@@ -1,0 +1,36 @@
+// Footer
+.page-footer {
+  padding: 60px 0;
+  color: $text-footer;
+  background-color: $bg-dark;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 70px;
+  }
+
+  &__item:last-child {
+    margin-left: auto;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__logo {
+    color: $text-white;
+  }
+
+  &__link--inverse:hover,
+  &__link--inverse:focus {
+    color: $accent-color;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}

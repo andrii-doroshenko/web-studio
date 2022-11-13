@@ -1,0 +1,101 @@
+// Order form
+.order-form {
+  &__title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &__label {
+    position: absolute;
+    top: -16px;
+    left: 0;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 12px 12px 42px;
+    color: $title-text-color;
+    border: 1px solid $border-input-color;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: border 250ms $animation;
+  }
+
+  &__input::placeholder {
+    color: $primary-text-color-tr;
+  }
+
+  &__input:focus,
+  &__input:hover {
+    outline: none;
+    border: 1px solid $accent-color;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    fill: $title-text-color;
+    transform: translateY(-50%);
+  }
+
+  &__input:hover ~ &__icon,
+  &__input:focus ~ &__icon {
+    fill: $accent-color;
+    transition: fill 250ms $animation;
+  }
+}
+
+// Foter subscribe form
+.subscribe {
+  display: flex;
+  min-width: 570px;
+
+  &__input {
+    width: 100%;
+    margin-right: 12px;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $text-white;
+    background-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border: 1px solid $text-white-30;
+    border-radius: 4px;
+  }
+
+  &__input:hover {
+    cursor: pointer;
+  }
+
+  &__input::placeholder {
+    color: $text-white-60;
+  }
+
+  &-btn {
+    display: inline-flex;
+    align-items: center;
+    min-width: auto;
+  }
+
+  &-icon {
+    margin-left: 10px;
+  }
+}

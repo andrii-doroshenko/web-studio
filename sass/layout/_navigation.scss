@@ -1,0 +1,47 @@
+// Main navigatin
+.main-nav {
+  font-weight: 500;
+  color: $title-text-color;
+
+  &__list {
+    @extend %list-flex;
+  }
+
+  &__item:not(:last-child) {
+    @extend %item-margin;
+  }
+
+  &__link {
+    @extend %link-hover;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    width: 100%;
+    background-color: $accent-color;
+    border-radius: 2px;
+
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 250ms $animation;
+  }
+  &__link:hover::after,
+  &__link:focus::after {
+    transform: scaleX(1);
+  }
+  &__link--current {
+    color: $accent-color;
+  }
+  &__link--current::after {
+    transform: none;
+    transition: none;
+  }
+}

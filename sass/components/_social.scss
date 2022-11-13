@@ -1,0 +1,54 @@
+// Social icons group
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+  }
+
+  &__link:hover &-icon,
+  &__link:focus &-icon {
+    fill: $text-white;
+  }
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+    fill: inherit;
+
+    transition: fill 250ms $animation;
+  }
+}
+
+// Footer socials
+.social-footer-list {
+  display: flex;
+  gap: 10px;
+
+  &__link {
+    width: 45px;
+    height: 45px;
+    background-color: $icon-footer-background;
+    border-radius: 50%;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+  }
+
+  &__icon {
+    fill: $text-white;
+  }
+}

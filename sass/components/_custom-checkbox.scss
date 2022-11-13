@@ -1,0 +1,34 @@
+// order custom-checkbox
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+
+  &__check {
+    display: inline-flex;
+    margin-right: 9px;
+    cursor: pointer;
+  }
+
+  &__svg {
+    fill: none;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;
+    transition: background-color 250ms $animation;
+  }
+
+  &__input:focus + &__svg,
+  &__input:hover + &__svg {
+    outline: 1px solid $accent-color;
+  }
+
+  &__input:checked + &__svg {
+    border: none;
+    background-color: $accent-color;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $accent-color;
+  }
+}

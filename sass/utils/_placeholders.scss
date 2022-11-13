@@ -1,0 +1,17 @@
+%list-flex {
+  display: flex;
+  letter-spacing: 0.02em;
+  line-height: 1.14;
+}
+
+%item-margin {
+  margin-right: 50px;
+}
+
+//Header links-hover underline
+%link-hover {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
