@@ -1,17 +1,31 @@
 // Section Benefits
 .benefits {
-  padding: $padding-section 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1600px) {
+    padding: $padding-section 0;
+  }
 
   &__list {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
 
   &__item {
-    max-width: 270px;
+    @media screen and (min-width: 767px) and (max-width: 1599px) {
+      flex-basis: calc(100% / 2 - 15px);
+    }
+    @media screen and (min-width: 1600px) {
+      max-width: 270px;
+    }
   }
 
   &__item:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__thumb {
@@ -27,6 +41,9 @@
     margin-bottom: 10px;
     font-size: inherit;
     text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__icon {

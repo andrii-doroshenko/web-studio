@@ -1,5 +1,9 @@
 // Section "What we do"
 .what-we-do {
+  @media screen and (max-width: 1599px) {
+    display: none;
+  }
+
   padding: 0 0 $padding-section 0;
 
   &__list {

@@ -14,6 +14,7 @@
 @import "./components/social"; // Socials
 @import "./components/tabs"; // Tabs
 @import "./components/cards"; // Cards
+@import "./components/menu-mobile-toggle"; // Mobile menu toggle
 
 @import "./layout/header"; // Header
 @import "./layout/navigation"; // Navigation
@@ -60,22 +61,32 @@ ul {
   color: $text-white;
 }
 
-.section-title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  text-align: center;
+.section {
+  & > .container {
+    max-width: 480px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+    }
+    @media screen and (min-width: 1600px) {
+      max-width: 1200px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: center;
+
+    @media screen and (min-width: 1600px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+  }
 }
 
 .list {
   list-style-type: none;
-}
-
-// Links
-.link {
-  color: inherit;
-  text-decoration: none;
-
-  transition: color 250ms $animation, background-color 250ms $animation, border-color 250ms $animation;
 }
 
 // Images
@@ -92,18 +103,25 @@ img {
   fill: $social-primary-color;
 }
 
-// Order-form textarea
+// Order-form
+.order-form > .btn-primary {
+  padding: 10px 52px;
+}
+
 .textarea {
   padding-left: 16px;
   min-height: 120px;
   resize: none;
 }
 
-// Order-form checkbox group
 .checkbox-group {
   margin-bottom: 30px;
   text-align: center;
   line-height: 1.7;
+
+  @media screen and (max-width: 1599px) {
+    font-size: 12px;
+  }
 }
 
 .form-icon {
@@ -112,11 +130,17 @@ img {
 
 // Cards list
 .works {
-  padding: $padding-section 0;
-
+  padding: 60px 0;
   &__list {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    @media screen and (min-width: 768px) {
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    padding: $padding-section 0;
   }
 }
 
@@ -126,7 +150,10 @@ img {
   font-style: normal;
 
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1600px) {
+      margin-bottom: 9px;
+    }
   }
 
   &__link {

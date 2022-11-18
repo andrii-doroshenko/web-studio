@@ -1,47 +1,82 @@
+// Links
+.link {
+  color: inherit;
+  text-decoration: none;
+
+  transition: color 250ms $animation, background-color 250ms $animation,
+    border-color 250ms $animation;
+}
+
 // Main navigatin
 .main-nav {
-  font-weight: 500;
   color: $title-text-color;
 
-  &__list {
-    @extend %list-flex;
-  }
-
-  &__item:not(:last-child) {
-    @extend %item-margin;
-  }
-
   &__link {
-    @extend %link-hover;
+    @media screen and (min-width: 768px) {
+      position: relative;
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   &__link:hover,
   &__link:focus {
     color: $accent-color;
   }
-  &__link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    height: 4px;
-    width: 100%;
-    background-color: $accent-color;
-    border-radius: 2px;
 
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform 250ms $animation;
-  }
-  &__link:hover::after,
-  &__link:focus::after {
-    transform: scaleX(1);
-  }
   &__link--current {
     color: $accent-color;
   }
+
+  &__list {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 300px;
+      font-size: 40px;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link::after {
+    @media screen and (min-width: 768px) {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 4px;
+      width: 100%;
+      background-color: $accent-color;
+      border-radius: 2px;
+
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 250ms $animation;
+    }
+  }
+  &__link:hover::after,
+  &__link:focus::after {
+    @media screen and (min-width: 768px) {
+      transform: scaleX(1);
+    }
+  }
   &__link--current::after {
-    transform: none;
-    transition: none;
+    @media screen and (min-width: 768px) {
+      transform: none;
+      transition: none;
+    }
   }
 }

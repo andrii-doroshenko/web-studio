@@ -1,3 +1,23 @@
+// Mobile social-list
+.social-list {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    font-size: 18px;
+    color: $accent-color;
+
+    &__item:not(:last-child) {
+      padding-right: 10px;
+      border-right: 1px solid $border-input-color;
+    }
+
+    &__item:not(:first-child) {
+      padding-left: 10px;
+    }
+  }
+}
+
 // Social icons group
 .social {
   display: flex;
@@ -35,7 +55,9 @@
 .social-footer-list {
   display: flex;
   gap: 10px;
-
+  @media screen and (max-width: 1599px) {
+    justify-content: center;
+  }
   &__link {
     width: 45px;
     height: 45px;

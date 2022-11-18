@@ -1,11 +1,15 @@
 // Main Logo
 .logo {
   font-family: $raleway;
-  @include font-property(26px, 700, 1.2);
+  @include font-property(24px, 700, 1.2);
   text-decoration: none;
   color: $dark-color;
 
   &--color {
     color: $accent-color;
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 26px;
   }
 }
