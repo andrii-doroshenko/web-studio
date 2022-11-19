@@ -1,6 +1,6 @@
 // Section Our team
 .team {
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 1200px) {
     padding: $padding-section 0;
   }
   padding: 60px 0;
@@ -15,7 +15,7 @@
   }
 
   &__item {
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
       max-width: 270px;
     }
     overflow: hidden;
@@ -24,7 +24,7 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    @media screen and (min-width: 480px) and (max-width: 1599px) {
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
       flex-basis: calc(100% / 2 - 15px);
     }
   }
@@ -38,7 +38,7 @@
   &__description {
     padding: 30px 15px 24px 15px;
     text-align: center;
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
       padding: 30px 32px;
     }
   }

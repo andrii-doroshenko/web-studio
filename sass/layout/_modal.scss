@@ -26,7 +26,7 @@
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms $animation;
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
       max-width: 530px;
     }
   }

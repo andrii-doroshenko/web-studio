@@ -37,7 +37,7 @@
 
     transition: border 250ms $animation;
 
-    @media screen and (max-width: 1599px) {
+    @media screen and (max-width: 1199px) {
       font-size: 14px;
     }
   }
@@ -69,13 +69,8 @@
 
 // Foter subscribe form
 .subscribe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (min-width: 1600px) {
-    flex-direction: row;
+  @media screen and (min-width: 1200px) {
+    display: flex;
     min-width: 570px;
   }
 
@@ -90,12 +85,11 @@
     border: 1px solid $text-white-30;
     border-radius: 4px;
 
-    @media screen and (max-width: 1599px) {
-      width: 450px;
+    @media screen and (max-width: 1199px) {
       margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 1600px) {
+    @media screen and (min-width: 1200px) {
       margin-right: 12px;
     }
   }
@@ -116,5 +110,6 @@
 
   &-icon {
     margin-left: 10px;
+    vertical-align: middle;
   }
 }
