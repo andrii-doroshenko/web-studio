@@ -634,15 +634,16 @@ summary {
   position: absolute;
   top: 50%;
   padding: 0 24px;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.4;
   color: #ffffff;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 375px) {
   .card__drawer-content {
     font-size: 18px;
+    line-height: 1.6;
   }
 }
 .card:hover .card__drawer, .card:focus .card__drawer {
