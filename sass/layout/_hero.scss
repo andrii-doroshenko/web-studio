@@ -1,17 +1,14 @@
 // Section hero
 .hero {
   margin: 0 auto;
-  padding: 200px 0;
+  max-width: 480px;
+  padding: 118px 0;
   background-color: $img-background;
   background-image: linear-gradient($img-overlay, $img-overlay),
     url(../images/hero-480w.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  @media screen and (max-width: 479px) {
-    max-width: 480px;
-  }
 
   @media screen and (min-width: 480px) {
     max-width: 480px;
@@ -28,7 +25,6 @@
   // Hero images for tablets resolution 1x and 2x
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    padding: 118px 0;
     background-image: linear-gradient($img-overlay, $img-overlay),
       url(../images/hero-768w.jpg);
 
@@ -67,17 +63,14 @@
   }
   &__title {
     margin-bottom: 30px;
-    @include font-property(44px, 900, 1.4);
+    @include font-property(26px, 900, 1.6);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $text-white;
 
-    @media screen and (min-width: 767px) {
-      font-size: 26px;
-      line-height: 1.6;
-    }
     @media screen and (min-width: 1200px) {
       font-size: 44px;
+      line-height: 1.4;
     }
   }
 }
